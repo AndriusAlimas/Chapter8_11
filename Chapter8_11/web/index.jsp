@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Test header</title>
 </head>
-<body>
+	<body>
  	<!-- With scripting we can do: -->
 	 Host is : <%= request.getHeader("host") %><br>
 	 <!-- using EL:-->
@@ -16,5 +16,10 @@
 	 <hr>
 	 Using headerValues implicit object: ${headerValues.host[0]}
 	 <hr>
-</body>
+	 <!-- HttpServletRequest getMethod() 
+	 USING SCRIPTING: -->
+	 Method is: <%= request.getMethod() %><br>
+	 <!-- USING EL: -->
+	 Method is: ${pageContext.request.method}
+	</body>
 </html>
